@@ -1,0 +1,147 @@
+.App {
+  text-align: center;
+  font-family: serif;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.TitleText{
+  position: absolute;
+  font-size: calc(50px + 2vmin);
+  color: #ff69b4;
+  top: 4vh;
+  left: 55vw;
+}
+.ContentText {
+  position: relative;
+  height: 40vmin;
+  width: 70vw;
+  left: 10vw;
+  top: -5vh;
+  color: #ff69b4;
+}
+
+/******************************
+*           Menu
+*******************************/
+.graRuta{
+  position: absolute;
+  background-color: lightgray;
+  width: 20%;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+}
+.SearchBar{
+  position: absolute;
+  background-color: white;
+  width: 16%;
+  height: 5vh;
+  top: 3vh;
+  left: 2vw;
+  color: black;
+  text-align: left;
+}
+
+/******************************
+*           Wiki
+*******************************/
+.WikiMeny{
+  position: absolute;
+  background-color: aquamarine;
+  width: 16%;
+  height: 13vh;
+  top: 9vh;
+  left: 2vw;
+}
+.WikiText{
+  position: absolute;
+  background-color: gold;
+  width: 4vw;
+  height: 5vh;
+  left: 6vw;
+}
+.WikiPlus{
+  position: absolute;
+  background-color: gold;
+  width: 3vw;
+  height: 6vh;
+  top: 6vh;
+  left: 1vw;
+  border-radius: 50%;;
+}
+.WikiPenna{
+  position: absolute;
+  background-color: gold;
+  width: 3vw;
+  height: 6vh;
+  top: 6vh;
+  left: 6.5vw;
+  border-radius: 50%;;
+}
+.WikiSlang{
+  position: absolute;
+  background-color: gold;
+  width: 3vw;
+  height: 6vh;
+  top: 6vh;
+  left: 12vw;
+  border-radius: 50%;;
+}
+
+/******************************
+*         WikiPage
+*******************************/
+.WikiPageMeny{
+  position: absolute;
+  background-color: aquamarine;
+  width: 16%;
+  height: 13vh;
+  top: 24vh;
+  left: 2vw;
+}
+.WikiPageText{
+  position: absolute;
+  background-color: gold;
+  width: 7vw;
+  height: 5vh;
+  left: 4.5vw;
+}
+.WikiPagePlus{
+  position: absolute;
+  background-color: gold;
+  width: 3vw;
+  height: 6vh;
+  top: 6vh;
+  left: 1vw;
+  border-radius: 50%;;
+}
+.WikiPagePenna{
+  position: absolute;
+  background-color: gold;
+  width: 3vw;
+  height: 6vh;
+  top: 6vh;
+  left: 6.5vw;
+  border-radius: 50%;;
+}
+.WikiPageSlang{
+  position: absolute;
+  background-color: gold;
+  width: 3vw;
+  height: 6vh;
+  top: 6vh;
+  left: 12vw;
+  border-radius: 50%;;
+}
+
+
+.loginform{
+}
