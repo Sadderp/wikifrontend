@@ -34,12 +34,13 @@ function AddWiki(props){
             navigate('/Add', {state:{error:"Something went wrong"}});
         }
     }
+    
     return(
-        <div className="loginform">
+        <div className="Addform">
             <div className="error">{error}</div>
             <h1 className="header"> Create wiki </h1>
             <div><label>Title: <input type="text" value={title} onChange={handleChangeTitle}></input></label></div>
-            <div><label>Content: <input type="text" value={content} onChange={handleChangeContent}></input></label></div>
+            <div><label>Content: <input className="WikiInput" type="text" value={content} onChange={handleChangeContent}></input></label></div>
             <button onClick={() => sendData()}>Create wiki</button>
         </div>
     )
