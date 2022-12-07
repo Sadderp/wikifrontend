@@ -28,6 +28,7 @@ function AddWiki(props){
     const sendIt = async (url) => {
         const response = await fetch(`${url}`);
         const data = await response.json();
+        console.log(data);
         if(data.Type=="Ok"){
             navigate('/Add', {state:{error:"Wiki created"}});
         } else if(data.Type=="Error"){

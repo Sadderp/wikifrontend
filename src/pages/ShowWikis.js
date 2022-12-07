@@ -30,7 +30,7 @@ function ShowWikis(props){
         showWiki();
     }
     const showWiki = () => {
-        result.array.forEach(data => {
+        result.array.forEach(result => {
             console.log(result.Data['title']);  
             wikiList.push(result.Data['title']);
         });

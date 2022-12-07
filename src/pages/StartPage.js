@@ -13,9 +13,9 @@ function StartPage(props){
         let path = `/Add`; 
         navigate(path);
     }
-    {/*useEffect(() => {
+    /*useEffect(() => {
         ShowWikis();
-    },[]);*/}
+    });*/
 
     return(
         <div className="App">
