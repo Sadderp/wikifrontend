@@ -3,7 +3,7 @@
   font-family: serif;
 }
 .App-header {
-  background-color: #282c34;
+  background-color: #dfdfdf;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
 .TitleText{
   position: absolute;
   font-size: calc(50px + 2vmin);
-  color: #ff69b4;
+  color: #222222;
   top: 4vh;
   left: 55vw;
 }
@@ -25,7 +25,7 @@
   width: 70vw;
   left: 10vw;
   top: -5vh;
-  color: #ff69b4;
+  color: #222222;
 }
 
 /******************************
@@ -33,7 +33,7 @@
 *******************************/
 .graRuta{
   position: absolute;
-  background-color: lightgray;
+  background-color: rgb(180, 180, 180);
   width: 20%;
   height: 100vh;
   top: 0px;
@@ -47,7 +47,8 @@
   top: 3vh;
   left: 2vw;
   color: black;
-  text-align: left;
+  text-align: center;
+  border-radius: 30px;
 }
 
 /******************************
@@ -55,15 +56,15 @@
 *******************************/
 .WikiMeny{
   position: absolute;
-  background-color: aquamarine;
+  background-color: rgb(218, 218, 218);
   width: 16%;
   height: 13vh;
   top: 9vh;
   left: 2vw;
+
 }
 .WikiText{
   position: absolute;
-  background-color: gold;
   width: 4vw;
   height: 5vh;
   left: 6vw;
@@ -100,21 +101,25 @@
 *         WikiPage
 *******************************/
 .WikiPageMeny{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  background-color: aquamarine;
+  background-color: rgb(218, 218, 218);
   width: 16%;
   height: 13vh;
   top: 24vh;
   left: 2vw;
+ 
 }
 .WikiPageText{
   position: absolute;
-  background-color: gold;
-  width: 7vw;
-  height: 5vh;
-  left: 4.5vw;
+  margin-bottom: 20px;
+  width: 7vmin;
+  height: 5vmin;
+
 }
-.WikiPagePlus{
+/* .WikiPagePlus{
   position: absolute;
   background-color: gold;
   width: 3vw;
@@ -125,12 +130,12 @@
 }
 .WikiPagePenna{
   position: absolute;
-  background-color: gold;
+  background-color: grey;
   width: 3vw;
   height: 6vh;
   top: 6vh;
   left: 6.5vw;
-  border-radius: 50%;;
+  border-radius: 20%;
 }
 .WikiPageSlang{
   position: absolute;
@@ -140,6 +145,20 @@
   top: 6vh;
   left: 12vw;
   border-radius: 50%;;
+} */
+
+.WikiPagePlus,
+.WikiPagePenna,
+.WikiPageSlang{
+  
+  float: right;
+  margin-right: 30px;
+  background-color: gold;
+  width: 3vw;
+  height: 6vh;
+  top: 6vh;
+  left: 12vw;
+  border-radius: 50%;
 }
 
 
