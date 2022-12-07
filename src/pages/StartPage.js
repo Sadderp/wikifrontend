@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { saveLS } from "../components/functions";
 import { loadLS } from "../components/functions";
@@ -13,6 +13,9 @@ function StartPage(props){
         let path = `/Add`; 
         navigate(path);
     }
+    {/*useEffect(() => {
+        ShowWikis();
+    },[]);*/}
 
     return(
         <div className="App">
