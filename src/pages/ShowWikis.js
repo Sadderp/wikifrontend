@@ -1,24 +1,16 @@
-import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { saveLS } from "../components/functions";
-import { loadLS } from "../components/functions";
+import React, { useState,useEffect } from "react";
+import {  useNavigate } from "react-router-dom";
 import '../App.css';
+import WikiRow from "../components/WikiRow";
 
 function ShowWikis(props){
-    const { state } = useLocation();
     let navigate = useNavigate();
-    let titel = "";
-    let error = "";
-    if(state != null){
-        error = state.error;
-    }
-    let wikiList = [];
-    let result = {};
-
     const API_URL ="https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=showWikis";
-    sendIt(API_URL);
-
-    const sendIt = async (url) => {
+    const [wikiLista,setwikiLista] = useState([]);
+    
+    
+    const SendIt = async (url) => {
+        let wikiList = [];
         const response = await fetch(`${url}`);
         const data = await response.json();
         let result = data;
@@ -27,18 +19,22 @@ function ShowWikis(props){
         } else if(data.Type=="Error"){
             navigate('/start', {state:{error:"Couldn't load wikis"}});
         }
-        showWiki();
+//        console.table(result.Data["Wiki entry"])
+        result.Data["Wiki entry"].forEach(wikis => {
+//            console.log(wikis['title']);  
+            wikiList.push(wikis);
+        })
+        setwikiLista(wikiList)
     }
-    const showWiki = () => {
-        result.array.forEach(result => {
-            console.log(result.Data['title']);  
-            wikiList.push(result.Data['title']);
-        });
-    }
+  
+    useEffect(() => {
+        SendIt(API_URL);
+      },[]);
+    
 
     return(
         <div>
-            { wikiList }
+            { wikiLista.map((wiki)=>(<WikiRow  key={wiki.ID} wiki={wiki} />))}
         </div>
     )
 }
