@@ -40,7 +40,7 @@ function AddWiki(props){
             <div className="error">{error}</div>
             <h1 className="header"> Create wiki </h1>
             <div><label>Title: <input type="text" value={title} onChange={handleChangeTitle}></input></label></div>
-            <div><label>Content: <input className="WikiInput" type="text" value={content} onChange={handleChangeContent}></input></label></div>
+            <div><label>Content: <input className="WikiInput" type="text" value={content} onChange={handleChangeContent} style={{height: 100}}></input></label></div>
             <button onClick={() => sendData()}>Create wiki</button>
         </div>
     )

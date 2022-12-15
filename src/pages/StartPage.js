@@ -23,9 +23,8 @@ function StartPage(props){
             <div className="graRuta">
                 
             </div>
-            <div className="SearchBar">
-            Search
-            </div>
+            <div ><input type={"text"} placeholder={"Search"} className={"Searchbar"}></input></div>
+
             <div className="WikiMeny">
                 <div className="WikiText">
                     Wiki
