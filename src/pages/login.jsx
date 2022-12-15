@@ -38,14 +38,21 @@ function Login(props){
     }
     
     return(
+        
         <div className="loginform">
             <div className="error">{error}</div>
-            <h1 className="header"> Login </h1>
-            <div><label>Username: <input type="text" value={user} onChange={handleChangeUser}></input></label></div>
-            <div><label>Password: <input type="password" value={password} onChange={handleChangePassword}></input></label></div>
-            <button onClick={() => sendData()}>Log in</button>
+            <h1 className="header"> Logga in </h1>
+            <div><input type="text" value={user} onChange={handleChangeUser}></input></div>
+            <div><input type="password" placeholder="password" value={password} onChange={handleChangePassword}></input></div>
+            <button onClick={() => sendData()}>▶</button>
+              
+            
         </div>
+        
+        
+        
     )
+    
 }
 
 export default Login;

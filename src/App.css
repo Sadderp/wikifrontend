@@ -10,7 +10,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-}
+
+} 
+
+
+
 
 .TitleText{
   position: absolute;
@@ -18,14 +22,26 @@
   color: #222222;
   top: 4vh;
   left: 55vw;
+  
 }
 .ContentText {
   position: relative;
+  text-align: left;
   height: 40vmin;
   width: 70vw;
-  left: 10vw;
+  left: 7vw;
   top: -5vh;
   color: #222222;
+}
+
+.backbox {
+  position: absolute;
+  height: 100vh;
+  width: 25vw;
+  background-color: black;
+  opacity: 0.5;
+
+
 }
 
 /******************************
@@ -36,32 +52,35 @@
   background-color: rgb(180, 180, 180);
   width: 20%;
   height: 100vh;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 }
-.SearchBar{
-  position: absolute;
-  background-color: white;
+
+.Searchbar {
+  position:absolute;
   width: 16%;
-  height: 5vh;
-  top: 3vh;
+  height: 4vh;
+  border-radius: 2vh;
+  top: 2vh;
   left: 2vw;
-  color: black;
+  border: black 1px;
+  font-size: 2vh;
   text-align: center;
-  border-radius: 30px;
+  box-shadow: #5a5a5a 0 5px 5px;
 }
 
 /******************************
 *           Wiki
 *******************************/
 .WikiMeny{
+  display: flex;
   position: absolute;
-  background-color: rgb(218, 218, 218);
-  width: 16%;
-  height: 13vh;
   top: 9vh;
   left: 2vw;
-
+  width: 16vw;
+  height: 13vh;
+  background-color: rgb(218, 218, 218);
+  box-shadow: #5a5a5a 0 5px 5px;
 }
 .WikiText{
   position: absolute;
@@ -69,7 +88,7 @@
   height: 5vh;
   left: 6vw;
 }
-.WikiPlus{
+/* .WikiPlus{
   position: absolute;
   background-color: gold;
   width: 3vw;
@@ -95,21 +114,42 @@
   top: 6vh;
   left: 12vw;
   border-radius: 50%;;
+} */
+
+
+.WikiPlus,
+.WikiPenna,
+.WikiSlang{
+  float: left;
+  margin-left: 30px;
+  background-color: gold;
+  width: 3vw;
+  height: 6vh;
+  top: 6vh;
+  left: 12vw;
+  border-radius: 50%;
+  /* position: absolute;
+  background-color: gold;
+  width: 3vw;
+  height: 6vh;
+  top: 6vh;
+  left: 12vw;
+  border-radius: 50%;; */
 }
+
 
 /******************************
 *         WikiPage
 *******************************/
 .WikiPageMeny{
   display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
-  background-color: rgb(218, 218, 218);
-  width: 16%;
-  height: 13vh;
-  top: 24vh;
+  top: 25vh;
   left: 2vw;
+  width: 16vw;
+  height: 13vh;
+  background-color: rgb(218, 218, 218);
+  box-shadow: #5a5a5a 0 5px 5px;
  
 }
 .WikiPageText{
@@ -162,6 +202,3 @@
 }
 
 
-.wikiInput{
-  height:30%;
-}
