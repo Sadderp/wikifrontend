@@ -10,11 +10,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-
 } 
-
-
-
 
 .TitleText{
   position: absolute;
@@ -22,8 +18,8 @@
   color: #222222;
   top: 4vh;
   left: 55vw;
-  
 }
+
 .ContentText {
   position: relative;
   text-align: left;
@@ -40,18 +36,17 @@
   width: 25vw;
   background-color: black;
   opacity: 0.5;
-
-
 }
 
 /******************************
 *           Menu
 *******************************/
+
 .graRuta{
   position: absolute;
   background-color: rgb(180, 180, 180);
   width: 20%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   left: 0;
 }
@@ -72,8 +67,8 @@
 /******************************
 *           Wiki
 *******************************/
+
 .WikiMeny{
-  display: flex;
   position: absolute;
   top: 9vh;
   left: 2vw;
@@ -81,66 +76,32 @@
   height: 13vh;
   background-color: rgb(218, 218, 218);
   box-shadow: #5a5a5a 0 5px 5px;
+  border-radius: 5px;
 }
+
 .WikiText{
   position: absolute;
   width: 4vw;
   height: 5vh;
   left: 6vw;
 }
-/* .WikiPlus{
-  position: absolute;
-  background-color: gold;
-  width: 3vw;
-  height: 6vh;
-  top: 6vh;
-  left: 1vw;
-  border-radius: 50%;;
-}
-.WikiPenna{
-  position: absolute;
-  background-color: gold;
-  width: 3vw;
-  height: 6vh;
-  top: 6vh;
-  left: 6.5vw;
-  border-radius: 50%;;
-}
-.WikiSlang{
-  position: absolute;
-  background-color: gold;
-  width: 3vw;
-  height: 6vh;
-  top: 6vh;
-  left: 12vw;
-  border-radius: 50%;;
-} */
-
 
 .WikiPlus,
 .WikiPenna,
 .WikiSlang{
   float: left;
-  margin-left: 30px;
+  margin-left: 1.7vw;
+  margin-top: 5vh;
   background-color: gold;
   width: 3vw;
   height: 6vh;
-  top: 6vh;
-  left: 12vw;
   border-radius: 50%;
-  /* position: absolute;
-  background-color: gold;
-  width: 3vw;
-  height: 6vh;
-  top: 6vh;
-  left: 12vw;
-  border-radius: 50%;; */
 }
-
 
 /******************************
 *         WikiPage
 *******************************/
+
 .WikiPageMeny{
   display: flex;
   position: absolute;
@@ -149,50 +110,23 @@
   width: 16vw;
   height: 13vh;
   background-color: rgb(218, 218, 218);
-  box-shadow: #5a5a5a 0 5px 5px;
- 
+  box-shadow: inline #5a5a5a 0 5px 5px;
+  border-radius: 5px;
 }
+
 .WikiPageText{
   position: absolute;
-  margin-bottom: 20px;
+  margin-left: 4.5vw;
   width: 7vmin;
   height: 5vmin;
-
 }
-/* .WikiPagePlus{
-  position: absolute;
-  background-color: gold;
-  width: 3vw;
-  height: 6vh;
-  top: 6vh;
-  left: 1vw;
-  border-radius: 50%;;
-}
-.WikiPagePenna{
-  position: absolute;
-  background-color: grey;
-  width: 3vw;
-  height: 6vh;
-  top: 6vh;
-  left: 6.5vw;
-  border-radius: 20%;
-}
-.WikiPageSlang{
-  position: absolute;
-  background-color: gold;
-  width: 3vw;
-  height: 6vh;
-  top: 6vh;
-  left: 12vw;
-  border-radius: 50%;;
-} */
 
 .WikiPagePlus,
 .WikiPagePenna,
 .WikiPageSlang{
-  
   float: right;
-  margin-right: 30px;
+  margin-left: 1.7vw;
+  margin-top: 5vh;
   background-color: gold;
   width: 3vw;
   height: 6vh;
@@ -201,4 +135,6 @@
   border-radius: 50%;
 }
 
-
+.Showtext {
+  margin: 10px;
+}
