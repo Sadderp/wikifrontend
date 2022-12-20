@@ -1,29 +1,50 @@
-import React from "react";
-import { useLocation,useEffect } from "react-router-dom";
+import React, { useState,useEffect,useLocation } from "react";
+import {  useNavigate } from "react-router-dom";
+import '../App.css';
+import WikiRow from "../components/WikiRow";
 
 const ShowWiki= () => {
 
     const {state}= useLocation();
     const wiki = state.wiki;
 
-    // const API_URL ="https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=showWikiEntries&wID=19"
-
-
-    // const SendIt = async (url) => {
-    //     let  = [];
-    //     const response = await fetch(`${url}`);
-    //     const data = await response.json();
-    //     let result = data;
-    //     if(data.Type==!empty){
-    //         navigate('/start', {state:{error:"Showing all wiki."}});
-    //     } else if(data.Type==empty){
-    //         navigate('/start', {state:{error:"Couldn't load wiki."}});
-    //     }
-
-
-        // useEffect(() => {
-        //     ShowIt(API_URL);
-        // },{});
+    
+    function ShowWikis(props){
+        let navigate = useNavigate();
+        const API_URL ="https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=showWikiEntries&wID="+id;
+        const [wikiLista,setwikiLista] = useState([]);
+        
+        
+        const SendIt = async (url) => {
+            let wikiList = [];
+            const response = await fetch(`${url}`);
+            const data = await response.json();
+            let result = data;
+            if(data.Type=="Ok"){
+                navigate('/start', {state:{error:"Showing all wikis"}});
+            } else if(data.Type=="Error"){
+                navigate('/start', {state:{error:"Couldn't load wikis"}});
+            }
+    //        console.table(result.Data["Wiki entry"])
+            result.Data["Wiki entry"].forEach(wikis => {
+    //            console.log(wikis['title']);  
+                wikiList.push(wikis);
+            })
+            setwikiLista(wikiList)
+        }
+      
+        useEffect(() => {
+            SendIt(API_URL);
+          },[]);
+        
+    
+        return(
+            <div className="ShowWiki">
+                { wikiLista.map((wiki)=>(<WikiRow  key={wiki.ID} wiki={wiki} />))}
+            </div>
+        )
+    }
+    
 
 return ( 
         <div className="Showtext">

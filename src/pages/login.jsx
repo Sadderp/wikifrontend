@@ -33,7 +33,7 @@ function Login(props){
             console.log('userID', data.Data['uID'])
             navigate('/start');
         } else if(data.Type=="Error"){
-            navigate('/login', {state:{error:"wrong username or password"}});
+            navigate('/login', {state:{error:"Wrong username or password!"}});
         }
     }
     
@@ -42,9 +42,9 @@ function Login(props){
         <div className="loginform">
             <div className="error">{error}</div>
             <h1 className="header"> Logga in </h1>
-            <div><input type="text" value={user} onChange={handleChangeUser}></input></div>
-            <div><input type="password" placeholder="password" value={password} onChange={handleChangePassword}></input></div>
-            <button onClick={() => sendData()}>▶</button>
+            <div><input type="text" placeholder="Användarnamn" value={user} onChange={handleChangeUser}></input></div>
+            <div><input type="password" placeholder="Lösenord" value={password} onChange={handleChangePassword}></input></div>
+            <button onClick={() => sendData()}>Logga in</button>
               
             
         </div>
