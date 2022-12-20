@@ -10,7 +10,7 @@ function AddWiki(props){
         error = state.error;
     }
     let user = loadLS('user');
-    let token = loadLS('Token');
+    let token = loadLS('token');
     let navigate = useNavigate();
     const [title, setTitle ] = useState();
     const [content, setContent ] = useState();
@@ -42,6 +42,7 @@ function AddWiki(props){
             <h1 className="header"> Create wiki </h1>
             <div><label>Title: <input type="text" value={title} onChange={handleChangeTitle}></input></label></div>
             <div><label>Content: <input className="WikiInput" type="text" value={content} onChange={handleChangeContent} style={{height: 100}}></input></label></div>
+            <div>Private:<input type="checkbox" ></input></div>
             <button onClick={() => sendData()}>Create wiki</button>
         </div>
     )
