@@ -1,10 +1,9 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const WikiRow= ({wiki}) => {
-
-    id = wiki['ID'];
     let navigate = useNavigate();
+    //let id = wiki['ID'];
     return ( 
         <div>
 
@@ -16,4 +15,5 @@ const WikiRow= ({wiki}) => {
     );
 }
 
+//export const Wiki_id = id;
 export default WikiRow;
