@@ -5,7 +5,7 @@ const WikiRow= ({wiki}) => {
     let navigate = useNavigate();
     //let id = wiki['ID'];
     return ( 
-        <div>
+        <div className="Knapptext">
 
             <button onClick={() => navigate("/ShowWiki", { state: { wiki:wiki} })}>Gå till wikisida</button>
             <span>Wiki ID: {wiki['ID']} </span>
