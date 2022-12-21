@@ -23,33 +23,26 @@ function StartPage(props){
             <div className="graRuta">
                 
             </div>
-            <div ><input type={"text"} placeholder={"Search"} className={"Searchbar"}></input></div>
+            <div ><input type={"text"} placeholder={"Sök "} className={"Searchbar"}></input></div>
 
             <div className="WikiMeny">
                 <div className="WikiText">
                     Wiki
                 </div>
-                <button className="WikiPlus" onClick={routeChange}>Create wiki</button>
-                <div className="WikiPenna">
-                    P
-                </div>
-                <div className="WikiSlang">
-                    S
-                </div>
+                <button className="WikiPlus" onClick={routeChange}>Skapa wiki</button>
+                
+                <button className="WikiPenna">Redigera wiki</button>
+                
+                <button className="WikiSlang">Tabort wiki</button>
             </div>
             <div className="WikiPageMeny">
                 <div className="WikiPageText">
                     Wikisida
                 </div>
-                <div className="WikiPagePlus">
-                    +
-                </div>
-                <div className="WikiPagePenna">
-                    P
-                </div>
-                <div className="WikiPageSlang">
-                    S
-                </div>
+                
+                <button className="WikiPagePlus">Skapa wikisida</button>
+                <button className="WikiPagePenna">Redigera wikisida</button>
+                <button className="WikiPageSlang">Tabort wikisida</button>
             </div>
             <div className="TitleText">
                 <ShowWikis/>
