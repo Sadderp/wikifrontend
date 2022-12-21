@@ -3,7 +3,7 @@
   font-family: serif;
 }
 .App-header {
-  background-color: #dfdfdf;
+  background-color: #dadada;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,21 +30,13 @@
   color: #222222;
 }
 
-.backbox {
-  position: absolute;
-  height: 100vh;
-  width: 25vw;
-  background-color: black;
-  opacity: 0.5;
-}
-
 /******************************
 *           Menu
 *******************************/
 
 .graRuta{
   position: absolute;
-  background-color: rgb(180, 180, 180);
+  background-color: #9b9cb1;
   width: 20%;
   height: 100%;
   top: 0;
@@ -66,9 +58,7 @@
 
 .ShowWiki {
   position:relative;
-  float:right;
-  color: white;
-  background-color: #222222;
+  margin-right: 400px;
   padding:10px;
   font-size: 20px;
 }
@@ -83,7 +73,7 @@
   left: 2vw;
   width: 16vw;
   height: 13vh;
-  background-color: rgb(218, 218, 218);
+  background-color: #f3f3f3;
   box-shadow: #5a5a5a 0 1px 8px;
   border-radius: 5px;
 }
@@ -101,11 +91,12 @@
   float: left;
   margin-left: 1.7vw;
   margin-top: 5vh;
-  background-color: gold;
+  background-color: #faf7ff;
   width: 3vw;
   height: 6vh;
   border-radius: 50%;
   box-shadow: #5a5a5a 0 1px 8px;
+  border: none;
 }
 
 /******************************
@@ -119,7 +110,7 @@
   left: 2vw;
   width: 16vw;
   height: 13vh;
-  background-color: rgb(218, 218, 218);
+  background-color: #f3f3f3;
   box-shadow: #5a5a5a 0 1px 8px;
   border-radius: 5px;
 }
@@ -137,13 +128,14 @@
   float: right;
   margin-left: 1.7vw;
   margin-top: 5vh;
-  background-color: gold;
+  background-color: #faf7ff;
   width: 3vw;
   height: 6vh;
   top: 6vh;
   left: 12vw;
   border-radius: 50%;
   box-shadow: #5a5a5a 0 1px 8px;
+  border: none;
 }
 
 .Showtext {
