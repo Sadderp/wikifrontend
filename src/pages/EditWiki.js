@@ -10,7 +10,7 @@ function EditWiki(props){
     let token = loadLS('Token');
     let ID = loadLS('id');
 
-    const API_URL ="https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=createWiki&uID="+user+"&token="+token+"&wID="+ID;
+    const API_URL ="https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=editWiki&uID="+user+"&token="+token+"&wID="+ID;
 }
 
 
