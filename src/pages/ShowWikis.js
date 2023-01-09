@@ -3,6 +3,8 @@ import {  useNavigate } from "react-router-dom";
 import '../App.css';
 import WikiRow from "../components/WikiRow";
 
+
+
 function ShowWikis(props){
     let navigate = useNavigate();
     const API_URL ="https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=showWikis";
@@ -35,6 +37,7 @@ function ShowWikis(props){
     return(
         <div className="ShowWiki">
             { wikiLista.map((wiki)=>(<WikiRow  key={wiki.ID} wiki={wiki} />))}
+            
         </div>
     )
 }

@@ -42,7 +42,6 @@ function AddWiki(props){
             <h1 className="header"> Skapa wiki </h1>
             <div><label>Titel: <input type="text" value={title} onChange={handleChangeTitle}></input></label></div>
             <div><label>Innehåll: <input className="WikiInput" type="text" value={content} onChange={handleChangeContent} style={{height: 100}}></input></label></div>
-            <div>Privat:<input type="checkbox" ></input></div>
             <button onClick={() => sendData()}>Skapa</button>
         </div>
     )

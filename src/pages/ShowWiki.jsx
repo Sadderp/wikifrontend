@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import {  useLocation, useNavigate } from "react-router-dom";
+import { saveLS } from "../components/functions";
 import '../App.css';
 import {WikiRow} from "../components/WikiRow";
 
@@ -10,8 +11,15 @@ const ShowWiki= () => {
     const [entries, setEntries] = useState([]);
     const [entry, setEntry] = useState([]);
     const API_URL ="https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=showWikiEntries&wID="+wiki.ID;
+
+    let navigate = useNavigate();
+    const routeChange = () =>{ 
+        let path = `/Edit`; 
+        navigate(path);
+    }
     
-    
+    saveLS('id', wiki['ID']);
+
     const SendIt = async (url) => {
         const response = await fetch(`${url}`);
         const data = await response.json();
@@ -24,22 +32,15 @@ const ShowWiki= () => {
         const answer = await response.json();
         setEntry(answer);
     }
-    const Pruttljud = () =>{
-        console.table(entry["Data"]);
-    }
     
     useEffect(() => {
         SendIt(API_URL);
         FetchEntries();
-        Pruttljud();
+  
     },[]);
     useEffect(() => {
         FetchEntries();
     },[entries]);
-    useEffect(() => {
-        Pruttljud();
-        
-    },[entry]);
     return ( 
         <div className="Showtext">
             <table>
@@ -47,6 +48,7 @@ const ShowWiki= () => {
                 <tr><h2><td>{JSON.stringify(wiki.title)}</td></h2></tr>
             </table>
             <div>{entry["Data"]?(entry["Data"]["Wiki_entry"].contents):("asd")}</div>
+            <button onClick={routeChange}>Redigera knapp</button>
         </div>
     );
 }
