@@ -16,9 +16,9 @@ const ShowWiki= () => {
     const API_URL ="https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=showWikiEntries&wID="+wiki.ID;
 
     let navigate = useNavigate();
+    
     const routeChange = () =>{ 
-        let path = `/Edit`; 
-        navigate(path);
+        navigate("/Edit", {state:{wiki:wiki}});
     }
     
     saveLS('id', wiki['ID']);
@@ -87,6 +87,7 @@ const ShowWiki= () => {
             <p>{startPage?(startPage.contents):("")}</p> <br/>
             <EntryList entries = {entries} wiki = {wiki}/>
             <Link to="/CreateEntry" className = "EntryEdit" state={{wiki:wiki}} style={{textDecoration: "none", color:"black", fontSize:24}}>+</Link><br/>
+            <button>Redigera wiki</button>
             <button onClick={Delete}>Ta bort wiki</button>
         </div>
     );
