@@ -37,7 +37,7 @@ function Login(props){
     
     return(
         <div className="loginform">
-            <div className="container">
+            <div className="container2">
                 <div className="error">{error}</div>
                 <h1 className="header"> Logga in </h1>
                 <div><input type="text" placeholder="Användarnamn" value={user} onChange={handleChangeUser}></input></div>

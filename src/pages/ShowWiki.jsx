@@ -87,7 +87,6 @@ const ShowWiki= () => {
             <p>{startPage?(startPage.contents):("")}</p> <br/>
             <EntryList entries = {entries} wiki = {wiki}/>
             <Link to="/CreateEntry" className = "EntryEdit" state={{wiki:wiki}} style={{textDecoration: "none", color:"black", fontSize:24}}>+</Link><br/>
-            <button onClick={routeChange}>Redigera wiki</button>
             <button onClick={Delete}>Ta bort wiki</button>
         </div>
     );
