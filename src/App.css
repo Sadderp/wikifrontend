@@ -97,9 +97,7 @@
   left: 6vw;
 }
 
-.WikiPlus,
-.WikiPenna,
-.WikiSlang{
+.WikiPlus{
   float: left;
   margin-left: 1.7vw;
   margin-top: 5vh;
@@ -112,51 +110,8 @@
 }
 
 /******************************
-*         WikiPage
+*         
 *******************************/
-
-.WikiPageMeny{
-  display: flex;
-  position: absolute;
-  top: 25vh;
-  left: 2vw;
-  width: 16vw;
-  height: 13vh;
-  background-color: #f3f3f3;
-  box-shadow: #5a5a5a 0 1px 8px;
-  border-radius: 5px;
-}
-
-.WikiPageText{
-  position: absolute;
-  margin-left: 4.5vw;
-  width: 7vmin;
-  height: 5vmin;
-}
-
-.WikiPagePlus,
-.WikiPagePenna,
-.WikiPageSlang{
-  float: right;
-  margin-left: 1.7vw;
-  margin-top: 5vh;
-  background-color: #faf7ff;
-  width: 3vw;
-  height: 6vh;
-  top: 6vh;
-  left: 12vw;
-  border-radius: 50%;
-  box-shadow: #5a5a5a 0 1px 8px;
-  border: none;
-}
-
-.Showtext {
-  margin: 10px;
-}
-
-
-
-
 
 
 .wikiHeader {
