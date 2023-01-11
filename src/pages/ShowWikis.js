@@ -36,7 +36,7 @@ function ShowWikis(props){
 
     return(
         <div className="ShowWiki">
-            { wikiLista.map((wiki)=>(<WikiRow  key={wiki.ID} wiki={wiki} />))}
+            { wikiLista.map((wiki)=>(<WikiRow wiki={wiki} key={wiki.ID}/>))}
             
         </div>
     )

@@ -7,9 +7,7 @@ const WikiRow= ({wiki}) => {
     return ( 
         <div className="Knapptext">
 
-            <button onClick={() => navigate("/ShowWiki", { state: { wiki:wiki} })}>Gå till wikisida</button>
-            <span>Wiki ID: {wiki['ID']} </span>
-            <span className='wiki'>{wiki['title']}</span>
+            <div onClick={() => navigate("/ShowWiki", { state: { wiki:wiki} })}>{wiki['ID']} {wiki['title']}</div>
             
         </div>
     );

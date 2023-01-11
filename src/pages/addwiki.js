@@ -30,7 +30,7 @@ function AddWiki(props){
         const data = await response.json();
         console.log(data);
         if(data.Type=="Ok"){
-            navigate('/Add', {state:{error:"Wiki created"}});
+            navigate('/start', {state:{error:"Wiki created"}});
         } else if(data.Type=="Error"){
             navigate('/Add', {state:{error:"Something went wrong"}});
         }
