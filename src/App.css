@@ -44,8 +44,6 @@
 input[type="text"],
 input[type="password"],
 .WikiInput {
-  width: 20%;
-input[type="password"] {
   width: 270px;
   height: 25px;
   border: none;
