@@ -6,6 +6,7 @@ import AddWiki from './pages/addwiki.js';
 import ShowWikis from './pages/ShowWikis';
 import ShowWiki from './pages/ShowWiki';
 import EditWiki from './pages/EditWiki';
+import ShowEntry from './pages/ShowEntry';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path="/Edit" element = {<EditWiki />} />
           <Route path="/Show" element = {<ShowWikis />} />
           <Route path="/ShowWiki" element = {<ShowWiki />} />
-
+          <Route path="/ShowEntry" element = {<ShowEntry />} />
         </Routes>
       </header>
     </div>

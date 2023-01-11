@@ -2,6 +2,13 @@
   text-align: center;
   font-family: serif;
 }
+
+* {
+  margin:0;
+  padding:0;
+  font-family:Cambria, serif;
+}
+
 .App-header {
   background-color: #dadada;
   min-height: 100vh;
@@ -59,7 +66,7 @@
 
 .ShowWiki {
   position:relative;
-  margin-right: 400px;
+  margin-right: 200px;
   padding:10px;
   font-size: 20px;
 }
@@ -145,4 +152,77 @@
 
 .Showtext {
   margin: 10px;
+}
+
+
+
+
+
+
+.wikiHeader {
+  position:relative;
+  top:0px;
+  width:100vw;
+  height:64px;
+  background-color:#9b9cb1;
+  text-align:left;
+}
+
+.wikiHeader a{
+  line-height:64px;
+  color:white;
+  
+}
+
+.entryRow {
+  display:flex;
+  justify-content:center;
+}
+
+.entryRow a {
+  margin:0;
+}
+
+.wikiHeaderToStart {
+  margin-left:64px;
+  float:left;
+  font-size:32px;
+}
+
+.wikiHeaderToWikis {
+  margin-right:64px;
+  float:right;
+  font-size:20px;
+}
+
+.main {
+  top:0px;
+  position:absolute;
+  width:100vw;
+  min-height:100vw;
+}
+
+.Entry {
+  position:relative;
+  top:48px;
+  bottom:64px;
+  left:64px;
+  right:64px;
+  text-align:left;
+}
+
+.EntryTitle {
+  font-weight:bold;
+  font-size:36px;
+}
+
+.EntryContent {
+  margin-top:18px;
+  font-size:24px;
+}
+
+.EntryStatus {
+  margin-top:64px;
+  color:#5a5a5a;
+  font-size:18px;
 }
