@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from "react";
-import {  useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { saveLS } from "../components/functions";
 import { loadLS } from "../components/functions";
 import '../App.css';
@@ -86,7 +86,8 @@ const ShowWiki= () => {
             <WikiHeader wiki = {wiki}/>
             <p>{startPage?(startPage.contents):("")}</p> <br/>
             <EntryList entries = {entries} wiki = {wiki}/>
-            <button onClick={routeChange}>Redigera knapp</button>
+            <Link to="/CreateEntry" className = "EntryEdit" state={{wiki:wiki}} style={{textDecoration: "none", color:"black", fontSize:24}}>+</Link><br/>
+            <button onClick={routeChange}>Redigera wiki</button>
             <button onClick={Delete}>Ta bort wiki</button>
         </div>
     );
