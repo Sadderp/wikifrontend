@@ -126,21 +126,7 @@ input[type="password"] {
   top: 90vh;
   background-color: #a9a2b6;
   width: 4vw;
-<<<<<<< HEAD
   height: 8vh;
-=======
-  height: 5vh;
-  left: 6vw;
-}
-
-.WikiPlus{
-  float: left;
-  margin-left: 1.7vw;
-  margin-top: 5vh;
-  background-color: #faf7ff;
-  width: 3vw;
-  height: 6vh;
->>>>>>> master
   border-radius: 50%;
   border: none;
 }
@@ -156,7 +142,6 @@ input[type="password"] {
 *         
 *******************************/
 
-<<<<<<< HEAD
 .WikiPageMeny{
   display: flex;
   position: absolute;
@@ -179,8 +164,6 @@ input[type="password"] {
 .Showtext {
   margin: 10px;
 }
-=======
->>>>>>> master
 
 .wikiHeader {
   position:relative;

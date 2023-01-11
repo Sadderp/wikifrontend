@@ -39,7 +39,6 @@ const ShowWiki= () => {
         FetchEntries();
   
     },[]);
-<<<<<<< HEAD
     useEffect(() => {
         FetchEntries();
     },[entries]);
@@ -51,35 +50,6 @@ const ShowWiki= () => {
             </table>
             <div>{entry["Data"]?(entry["Data"]["Wiki_entry"].contents):("asd")}</div>
             
-=======
-
-    let user = loadLS('user');
-    let token = loadLS('token');
-    let ID = loadLS('id');
-
-    const Delete = ()=> {
-        let answer = window.confirm("är du säker på att du vill ta bort den här wikin?");
-        if (answer){
-        let path = `/start`;
-        fetch("https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=deleteWiki&uID="+user+"&token="+token+"&wID="+ID)
-        .then((response) => response.json())
-        .then((data) =>{
-            navigate(path);
-        });}
-        else {
-            return;
-        }
-    }
-
-    return ( 
-        <div className = "main">
-            <WikiHeader wiki = {wiki}/>
-            <p>{startPage?(startPage.contents):("")}</p> <br/>
-            <EntryList entries = {entries} wiki = {wiki}/>
-            <Link to="/CreateEntry" className = "EntryEdit" state={{wiki:wiki}} style={{textDecoration: "none", color:"black", fontSize:24}}>+</Link><br/>
-            <button onClick={routeChange}>Redigera wiki</button>
-            <button onClick={Delete}>Ta bort wiki</button>
->>>>>>> master
         </div>
     );
 }

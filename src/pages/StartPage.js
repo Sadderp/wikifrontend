@@ -22,16 +22,10 @@ function StartPage(props){
             <div className="WikiText">
                 <button className="WikiPlus" onClick={routeChange}>Skapa wiki</button>
             </div>
-<<<<<<< HEAD
             <div className="container">
                 <ShowWikis/>
             </div>
                 
-=======
-            <div className="TitleText">
-                <ShowWikis/>
-            </div>
->>>>>>> master
         </header>
             
         
