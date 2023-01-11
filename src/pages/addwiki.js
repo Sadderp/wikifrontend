@@ -21,7 +21,8 @@ function AddWiki(props){
     const handleChangeContent = (e) => {
         setContent(e.target.value);
     }
-    const sendData = () => {
+    const sendData = (event) => {
+        event.preventDefault();
         const API_URL ="https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=createWiki&uID="+user+"&token="+token+"&title="+title+"&contents="+content;
         sendIt(API_URL);
     }
@@ -32,7 +33,7 @@ function AddWiki(props){
         if(data.Type=="Ok"){
             navigate('/start', {state:{error:"Wiki created"}});
         } else if(data.Type=="Error"){
-            navigate('/Add', {state:{error:"Something went wrong"}});
+            alert("ERROR: " + data.Data);
         }
     }
     
@@ -40,12 +41,12 @@ function AddWiki(props){
         <div className = "main">
             <br/><br/><br/><h1 className="header"> Skapa wiki </h1><br/><br/>
             <div className="error">{error}</div>
-            <form>
+            <form onSubmit = {sendData}>
                 <br/><label>Titel:</label><br/>
                 <input type="text" id = "WikiInput1" value={title} onChange={handleChangeTitle}></input><br/>
                 <br/><label>Beskrivning:</label><br/>
                 <textarea className="WikiInput" id = "WikiInput2" type="text" value={content} onChange={handleChangeContent} style={{height: 100}}></textarea><br/>
-                <button className="SubmitButton" onClick={() => sendData()}>Skapa</button>
+                <input type="submit" className="SubmitButton" value = "Skapa"></input>
             </form>
         </div>
     )
