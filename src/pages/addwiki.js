@@ -37,12 +37,16 @@ function AddWiki(props){
     }
     
     return(
-        <div className="Addform">
+        <div className = "main">
+            <br/><br/><br/><h1 className="header"> Skapa wiki </h1><br/><br/>
             <div className="error">{error}</div>
-            <h1 className="header"> Skapa wiki </h1>
-            <div><label>Titel: <input type="text" value={title} onChange={handleChangeTitle}></input></label></div>
-            <div><label>Innehåll: <input className="WikiInput" type="text" value={content} onChange={handleChangeContent} style={{height: 100}}></input></label></div>
-            <button onClick={() => sendData()}>Skapa</button>
+            <form>
+                <br/><label>Titel:</label><br/>
+                <input type="text" id = "WikiInput1" value={title} onChange={handleChangeTitle}></input><br/>
+                <br/><label>Beskrivning:</label><br/>
+                <textarea className="WikiInput" id = "WikiInput2" type="text" value={content} onChange={handleChangeContent} style={{height: 100}}></textarea><br/>
+                <button className="SubmitButton" onClick={() => sendData()}>Skapa</button>
+            </form>
         </div>
     )
 }

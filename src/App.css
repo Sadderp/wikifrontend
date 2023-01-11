@@ -42,12 +42,14 @@
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+.WikiInput {
   width: 20%;
   height: 25px;
   border: none;
   padding: 5px;
   border-radius: 5px;
+  resize:none;
 }
 
 .loginform button{
@@ -243,6 +245,16 @@ input[type="password"] {
   margin-top:24px;
   font-size:18px;
   color:#5a5a5a;
+}
+
+.SubmitButton {
+  width:92px;
+  height:36px;
+  margin-top:24px;
+  background-color:#9b9cb1;
+  color:white;
+  border:none;
+  font-size:20px;
 }
 
 .Entry form input[type=submit] {
