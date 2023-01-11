@@ -5,6 +5,7 @@ import StartPage from './pages/StartPage.js';
 import AddWiki from './pages/addwiki.js';
 import ShowWikis from './pages/ShowWikis';
 import ShowWiki from './pages/ShowWiki';
+import EditWiki from './pages/EditWiki';
 import ShowEntry from './pages/ShowEntry';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/login" element = {<Login />} />
           <Route path="/start" element = {<StartPage />} />
           <Route path="/Add" element = {<AddWiki />} />
+          <Route path="/Edit" element = {<EditWiki />} />
           <Route path="/Show" element = {<ShowWikis />} />
           <Route path="/ShowWiki" element = {<ShowWiki />} />
           <Route path="/ShowEntry" element = {<ShowEntry />} />

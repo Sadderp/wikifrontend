@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import {  useLocation, useNavigate } from "react-router-dom";
+import { saveLS } from "../components/functions";
 import '../App.css';
 import { EntryList } from "../components/EntryList";
 import { WikiHeader } from "../components/wikiHeader";
@@ -12,7 +13,14 @@ const ShowWiki= () => {
     const [startPage, setStartPage] = useState([]);
     const [entries, setEntries] = useState([]);
     const API_URL ="https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=showWikiEntries&wID="+wiki.ID;
+
+    let navigate = useNavigate();
+    const routeChange = () =>{ 
+        let path = `/Edit`; 
+        navigate(path);
+    }
     
+    saveLS('id', wiki['ID']);
     
     const getAllEntries = async () => {
         const response = await fetch(API_URL);
@@ -36,7 +44,7 @@ const ShowWiki= () => {
 
     /**
      * Get data for a specific entry
-     * @param {*} id 
+     * @param {number} id database ID of the entry
      * @returns 
      */
     const getEntry = async(id)=> {
@@ -61,6 +69,7 @@ const ShowWiki= () => {
             <WikiHeader wiki = {wiki}/>
             <p>{startPage?(startPage.contents):("")}</p> <br/>
             <EntryList entries = {entries} wiki = {wiki}/>
+            <button onClick={routeChange}>Redigera knapp</button>
         </div>
     );
 }

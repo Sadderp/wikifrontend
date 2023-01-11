@@ -31,7 +31,7 @@ function StartPage(props){
                 </div>
                 <button className="WikiPlus" onClick={routeChange}>Skapa wiki</button>
                 
-                <button className="WikiPenna">Redigera wiki</button>
+                <button className="WikiPenna"onClick={routeChange}>Redigera wiki</button>
                 
                 <button className="WikiSlang">Tabort wiki</button>
             </div>
