@@ -226,3 +226,43 @@
   color:#5a5a5a;
   font-size:18px;
 }
+
+.EntryEdit {
+  margin-top:16px;
+  font-size:18px;
+}
+
+.Entry form label {
+  position:relative;
+  margin-top:24px;
+  font-size:18px;
+  color:#5a5a5a;
+}
+
+.Entry form input[type=submit] {
+  width:92px;
+  height:36px;
+  margin-top:24px;
+  background-color:#9b9cb1;
+  color:white;
+  border:none;
+  font-size:20px;
+}
+
+.Entry form input[type=submit]:hover {
+  cursor:pointer;
+  background-color:#a7a8bb;
+}
+
+.Entry form input[type=text], .Entry form textarea {
+  width:60%;
+  border:none;
+  outline:none;
+  text-indent:8px;
+  padding:8px;
+  resize:none;
+}
+
+.EntryInput {
+  height:128px;
+}
