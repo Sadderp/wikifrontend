@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { saveLS } from "../components/functions";
+import { useNavigate } from "react-router-dom";
 import { loadLS } from "../components/functions";
 import '../App.css';
 import ShowWikis from './ShowWikis'
@@ -13,9 +11,6 @@ function StartPage(props){
         let path = `/Add`; 
         navigate(path);
     }
-    /*useEffect(() => {
-        ShowWikis();
-    });*/
 
     return(
         <div className="App">
@@ -30,24 +25,10 @@ function StartPage(props){
                     Wiki
                 </div>
                 <button className="WikiPlus" onClick={routeChange}>Skapa wiki</button>
-                
-                <button className="WikiPenna"onClick={routeChange}>Redigera wiki</button>
-                
-                <button className="WikiSlang">Tabort wiki</button>
-            </div>
-            <div className="WikiPageMeny">
-                <div className="WikiPageText">
-                    Wikisida
-                </div>
-                
-                <button className="WikiPagePlus">Skapa wikisida</button>
-                <button className="WikiPagePenna">Redigera wikisida</button>
-                <button className="WikiPageSlang">Tabort wikisida</button>
             </div>
             <div className="TitleText">
                 <ShowWikis/>
             </div>
-            
         </header>
         </div>)
     }
