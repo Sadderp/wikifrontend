@@ -68,12 +68,17 @@ const ShowWiki= () => {
     let ID = loadLS('id');
 
     const Delete = ()=> {
+        let answer = window.confirm("är du säker på att du vill ta bort den här wikin?");
+        if (answer){
         let path = `/start`;
         fetch("https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=deleteWiki&uID="+user+"&token="+token+"&wID="+ID)
         .then((response) => response.json())
         .then((data) =>{
             navigate(path);
-        });
+        });}
+        else {
+            return;
+        }
     }
 
     return ( 
