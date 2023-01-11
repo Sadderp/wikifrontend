@@ -62,7 +62,6 @@ const ShowWiki= () => {
         getAllEntries();
     },[]);
 
-    console.log(wiki);
     return ( 
         
         <div className = "main">
