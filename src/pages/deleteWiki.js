@@ -11,6 +11,8 @@ function deleteWiki(props) {
     let ID = loadLS('id');
 
     const API_URL ="https://takeee.ntigskovde.se/Wiki/wiki_index.php?action=deleteWiki&uID="+user+"&token="+token+"&wID="+ID;
+    
+    
     return(
         <div>
             <button onClick={routeChange}>Ta bort wiki</button>

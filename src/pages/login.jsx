@@ -40,13 +40,13 @@ function Login(props){
     return(
         
         <div className="loginform">
-            <div className="error">{error}</div>
-            <h1 className="header"> Logga in </h1>
-            <div><input type="text" placeholder="Användarnamn" value={user} onChange={handleChangeUser}></input></div>
-            <div><input type="password" placeholder="Lösenord" value={password} onChange={handleChangePassword}></input></div>
-            <button onClick={() => sendData()}>Fortsätt</button>
-              
-            
+            <div className="container">
+                <div className="error">{error}</div>
+                <h1 className="header"> Logga in </h1>
+                <div><input type="text" placeholder="Användarnamn" value={user} onChange={handleChangeUser}></input></div>
+                <div><input type="password" placeholder="Lösenord" value={password} onChange={handleChangePassword}></input></div>
+                <button onClick={() => sendData()}>Fortsätt</button>
+            </div>
         </div>
         
         
