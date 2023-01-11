@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { WikiHeader } from "../components/wikiHeader";
 
 export default function ShowEntry() {
@@ -16,6 +16,7 @@ export default function ShowEntry() {
                 <p className = "EntryTitle">{entry.title}</p>
                 <p className = "EntryContent">{entry.contents}</p>
                 <p className = "EntryStatus">{"Senast redigerad: " + entry.date + " av användare " + entry.uID + " (vi kan inte komma åt namnet lol)"}</p>
+                <Link to="/EditEntry" className = "EntryEdit" state={{entry:entry, wiki:wiki}}>Redigera</Link>
             </div>
         </div>
     );

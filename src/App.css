@@ -126,7 +126,21 @@ input[type="password"] {
   top: 90vh;
   background-color: #a9a2b6;
   width: 4vw;
+<<<<<<< HEAD
   height: 8vh;
+=======
+  height: 5vh;
+  left: 6vw;
+}
+
+.WikiPlus{
+  float: left;
+  margin-left: 1.7vw;
+  margin-top: 5vh;
+  background-color: #faf7ff;
+  width: 3vw;
+  height: 6vh;
+>>>>>>> master
   border-radius: 50%;
   border: none;
 }
@@ -139,9 +153,10 @@ input[type="password"] {
 
 
 /******************************
-*         WikiPage
+*         
 *******************************/
 
+<<<<<<< HEAD
 .WikiPageMeny{
   display: flex;
   position: absolute;
@@ -164,6 +179,8 @@ input[type="password"] {
 .Showtext {
   margin: 10px;
 }
+=======
+>>>>>>> master
 
 .wikiHeader {
   position:relative;
@@ -231,4 +248,44 @@ input[type="password"] {
   margin-top:64px;
   color:#5a5a5a;
   font-size:18px;
+}
+
+.EntryEdit {
+  margin-top:16px;
+  font-size:18px;
+}
+
+.Entry form label {
+  position:relative;
+  margin-top:24px;
+  font-size:18px;
+  color:#5a5a5a;
+}
+
+.Entry form input[type=submit] {
+  width:92px;
+  height:36px;
+  margin-top:24px;
+  background-color:#9b9cb1;
+  color:white;
+  border:none;
+  font-size:20px;
+}
+
+.Entry form input[type=submit]:hover {
+  cursor:pointer;
+  background-color:#a7a8bb;
+}
+
+.Entry form input[type=text], .Entry form textarea {
+  width:60%;
+  border:none;
+  outline:none;
+  text-indent:8px;
+  padding:8px;
+  resize:none;
+}
+
+.EntryInput {
+  height:128px;
 }
