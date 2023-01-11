@@ -12,11 +12,6 @@
 .App-header {
   background-color: #dadada;
   min-height: 100vh;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
 } 
 
@@ -38,41 +33,77 @@
   color: #222222;
 }
 
+.loginform {
+  position: absolute;
+  left: 10vw;
+  right:10vw;
+  top:40%;
+ 
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 20%;
+  height: 25px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.loginform button{
+  height: 25px;
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  border:none;
+  background-color: #9b9cb1;
+  color: white;
+}
+
+
 /******************************
 *           Menu
 *******************************/
 
-.graRuta{
+.Ruta{
   position: absolute;
   background-color: #9b9cb1;
-  width: 20%;
-  height: 100%;
+  width: 100%;
+  height: 64px;
   top: 0;
-  left: 0;
+  color: white;
 }
 
-.Searchbar {
-  position:absolute;
-  width: 16%;
-  height: 4vh;
-  border-radius: 2vh;
-  top: 2vh;
-  left: 2vw;
-  border: black 1px;
-  font-size: 2vh;
-  text-align: center;
-  box-shadow: #5a5a5a 0 1px 8px;
+.container{
+  display: flex;
+  justify-content: center;
 }
 
 .ShowWiki {
-  position:relative;
-  margin-right: 200px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap:20px;
+  column-gap:20px;
+  height:300px;
+  width:300px;
+  margin-top: 100px;;
+  background-color: #dadada;
+  width:80vw;
   padding:10px;
   font-size: 20px;
+  
 }
 
-.Knapptext{
-  text-align: left;
+.ShowWiki div {
+  height:80px;
+}
+
+.ShowWiki > *{
+  background-color: #bebebe;
+  border-radius: 10px;
+  box-shadow: rgb(138, 137, 137) 5px 5px 5px;
+  
+  
 }
 
 /******************************
@@ -90,29 +121,49 @@
   border-radius: 5px;
 }
 
-.WikiText{
+.WikiPlus {
   position: absolute;
+  top: 90vh;
+  background-color: #a9a2b6;
   width: 4vw;
-  height: 5vh;
-  left: 6vw;
-}
-
-.WikiPlus{
-  float: left;
-  margin-left: 1.7vw;
-  margin-top: 5vh;
-  background-color: #faf7ff;
-  width: 3vw;
-  height: 6vh;
+  height: 8vh;
   border-radius: 50%;
-  box-shadow: #5a5a5a 0 1px 8px;
   border: none;
 }
+
+.WikiText{
+  display: flex;
+  justify-content: center;
+
+}
+
 
 /******************************
 *         
 *******************************/
 
+.WikiPageMeny{
+  display: flex;
+  position: absolute;
+  top: 25vh;
+  left: 2vw;
+  width: 16vw;
+  height: 13vh;
+  background-color: #f3f3f3;
+  box-shadow: #5a5a5a 0 1px 8px;
+  border-radius: 5px;
+}
+
+.WikiPageText{
+  position: absolute;
+  margin-left: 4.5vw;
+  width: 7vmin;
+  height: 5vmin;
+}
+
+.Showtext {
+  margin: 10px;
+}
 
 .wikiHeader {
   position:relative;

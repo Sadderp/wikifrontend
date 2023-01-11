@@ -15,21 +15,20 @@ function StartPage(props){
     return(
         <div className="App">
         <header className="App-header">
-            <div className="graRuta">
-                
+            <div className="Ruta">
+                <h2>Wiki-who?</h2>
             </div>
-            <div ><input type={"text"} placeholder={"Sök "} className={"Searchbar"}></input></div>
-
-            <div className="WikiMeny">
-                <div className="WikiText">
-                    Wiki
-                </div>
+          
+            <div className="WikiText">
                 <button className="WikiPlus" onClick={routeChange}>Skapa wiki</button>
             </div>
-            <div className="TitleText">
+            <div className="container">
                 <ShowWikis/>
             </div>
+                
         </header>
+            
+        
         </div>)
     }
 
